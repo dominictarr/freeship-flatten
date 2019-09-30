@@ -26,6 +26,7 @@ var stations = MANY(
     return {
       name: d[0]+':'+d[1],
       type: d[0],
+      position: d[1],
       polyline: points
     }
   })
