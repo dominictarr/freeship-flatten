@@ -1,0 +1,21 @@
+{
+  "name": "freeship-flatten",
+  "description": "",
+  "version": "1.0.0",
+  "homepage": "https://github.com/dominictarr/freeship-flatten",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/freeship-flatten.git"
+  },
+  "dependencies": {
+    "greiner-hormann": "^1.4.1",
+    "monotone-convex-hull-2d": "^1.0.1",
+    "stack-expression": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "author": "Dominic Tarr @EMovhfIrFk4NihAKnRNhrfRaqIhBv1Wj8pTxJNgvCCY=.ed25519",
+  "license": "MIT"
+}

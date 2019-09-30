@@ -1,0 +1,6 @@
+# freeship-flatten
+
+
+## License
+
+MIT

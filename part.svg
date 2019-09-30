@@ -1,0 +1,5 @@
+<svg viewBox="0 0.0002 0.5804 0.4252" xmlns="http://www.w3.org/2000/svg">
+<path fill="none" stroke="red" strokeWidth="1px" label="Station:1.3" d="M 0.5804 0.3615L 0.5478 0.2848L 0.5149 0.2084L 0.4817 0.1322L 0.4482 0.0563L 0.3341 0.0432L 0.2214 0.0294L 0.1129 0.0153L 0.1101 0.0149L 0 0.0002 Z"/>
+<path fill="none" stroke="red" strokeWidth="1px" label="Station:1.5" d="M 0.5514 0.376L 0.5162 0.3013L 0.4806 0.227L 0.4446 0.1532L 0.4188 0.101L 0.4079 0.0802L 0.3038 0.0628L 0.2013 0.045L 0.1 0.0266L 0 0.0077 Z"/>
+<path fill="none" stroke="red" strokeWidth="1px" label="Station:2" d="M 0.4124 0.4252L 0.3678 0.3628L 0.323 0.3023L 0.3071 0.2814L 0.2772 0.2442L 0.2309 0.1887L 0.171 0.1663L 0.1125 0.1442L 0.0554 0.1223L 0 0.1008 Z"/>
+</svg>
