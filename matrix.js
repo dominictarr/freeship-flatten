@@ -18,11 +18,13 @@ function scale (point, n) {
 }
 
 function add (point, _point) {
+  console.error(point, _point)
   return [point[0]+_point[0], point[1]+_point[1]]
 }
 
 function rect(a, b) {
   return [a, [a[0], b[1]], b, [b[0], a[1]]]
 }
+
 
 module.exports = {min, max, scale, add, rect}

@@ -1,4 +1,5 @@
-var {min, max, scale, add, rect} = require('./matrix')
+var {min, max, scale, add, rect, bl, br} = require('./matrix')
+var {tl,tr,bl,br,bottom}=require('./tlbr')
 var hull = require('monotone-chain-convex-hull')
 var fs = require('fs')
 var gh = require('greiner-hormann')
@@ -27,7 +28,9 @@ plan.map(function (e) {
 
 var seatline = stations.pop()
 var seat_height = seatline.position
-var side_width = 0.15
+var side_width = 0.2
+var side_top_width = 0.1
+var nudge = 0.001 //1 mm, to ensure overlap
 var loa = max(seatline.polyline)[1]
 stations.map(e => {
   e.colour = 'green'
@@ -38,12 +41,27 @@ var plZ = stations[0].polyline
 stations[0].polyline = gh.intersection(plZ, rect(min(plZ), [max(plZ)[0], 0.2]))[0]
 
 var pl0 = stations[1].polyline
-var hole = rect([min(pl0)[0]+side_width, seat_height], add(max(pl0), [-side_width, 0.1]))
+var hole =
+gh.union([
+  [min(pl0)[0]+side_width, seat_height],
+    [max(pl0)[0]-side_width, seat_height],
+    add(br(pl0), [-side_top_width, nudge]),
+    add(bl(pl0), [side_top_width, nudge])
+], [
+    add(br(pl0), [0, nudge]),
+    add(bl(pl0), [0, nudge]),
+    [bottom(pl0)[0], seat_height]
+])[0]
+
+console.error('hole', hole)
+
+//rect([min(pl0)[0]+side_width, seat_height], add(max(pl0), [-side_width, 0.1]))
 
 stations[1].polyline = gh.diff(pl0, hole)[0]
 
 var pl1 = stations[2].polyline
 stations[2].polyline = gh.intersection(pl1, rect(min(pl1), [max(pl1)[0], seat_height]))[0]
+
 var pl2 = stations[3].polyline
 stations[3].polyline = gh.intersection(pl2, rect(min(pl2), [max(pl2)[0], seat_height]))[0]
 

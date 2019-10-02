@@ -7,6 +7,11 @@ greiner-hormann@^1.4.1:
   resolved "https://registry.yarnpkg.com/greiner-hormann/-/greiner-hormann-1.4.1.tgz#0c2e52e98657f6ee345072134fc4119be53bf491"
   integrity sha512-TN0p6knjYqaMs/llEjatU7ymo6olRztVFYFrqNx/3M3N0t+doUTaADKJFC/gKGwhtgKrrw8dP6c5ZXhw5k428g==
 
+monotone-chain-convex-hull@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/monotone-chain-convex-hull/-/monotone-chain-convex-hull-1.0.0.tgz#e5e3a39f305d6bc6fe71062fc7072bc56c3a55e0"
+  integrity sha1-5eOjnzBda8b+cQYvxwcrxWw6VeA=
+
 monotone-convex-hull-2d@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/monotone-convex-hull-2d/-/monotone-convex-hull-2d-1.0.1.tgz#47f5daeadf3c4afd37764baa1aa8787a40eee08c"

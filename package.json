@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "greiner-hormann": "^1.4.1",
+    "monotone-chain-convex-hull": "^1.0.0",
     "monotone-convex-hull-2d": "^1.0.1",
     "stack-expression": "^1.1.0"
   },
