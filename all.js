@@ -38,9 +38,11 @@ stations.map(e => {
 
 //Stations.
 var plZ = stations[0].polyline
-stations[0].polyline = gh.intersection(plZ, rect(min(plZ), [max(plZ)[0], 0.2]))[0]
+stations[0].polyline = gh.intersection(plZ, rect(min(plZ), [max(plZ)[0], seat_height]))[0]
 
 var pl0 = stations[1].polyline
+
+//a gap cut from the center bulkhead, to make space for the seat.
 var hole =
 gh.union([
   [min(pl0)[0]+side_width, seat_height],
